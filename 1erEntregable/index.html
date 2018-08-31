@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Editor en linea</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Edición y Dibujo</h1>
+      <h4>Bienvenido a tu editor. Aqui podrás dejar volar tu imaginación y expresarte.</h4>
+    </header>
+    <nav>
+      <ul class="navbar">
+        <li><i class="far fa-file-image 5x"></i></li>
+        <li><i class="far fa-folder-open 5x"></i></li>
+        <li><i class="far fa-save 5x"></i></li>
+      </ul>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-3">
+          <p>Elementos de edición</p>
+        </div>
+
+        <div class="col-sm-6" style="background:rgb(87, 189, 113)">
+          <p>Lienzo</p>
+          <canvas id="myCanvas" width="650" height="500" style="background:rgb(184, 113, 177)"></canvas>
+        </div>
+
+        <div class="col-sm-3">
+          <p>Filtros</p>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/draw.js"></script>
+
+  </body>
+
+</html>
