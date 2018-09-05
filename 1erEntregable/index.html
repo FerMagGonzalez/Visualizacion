@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Editor en linea</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -12,29 +14,54 @@
   <body>
     <header>
       <h1>Edición y Dibujo</h1>
-      <h4>Bienvenido a tu editor. Aqui podrás dejar volar tu imaginación y expresarte.</h4>
+      <h3>Bienvenido a tu editor. Aqui podrás dejar volar tu imaginación y expresarte.</h3>
     </header>
     <nav>
-      <ul class="navbar">
-        <li><i class="far fa-file-image 5x"></i></li>
-        <li><i class="far fa-folder-open 5x"></i></li>
-        <li><i class="far fa-save 5x"></i></li>
-      </ul>
+      <div class="container-fluid">
+        <ul class="nav">
+          <li><a title="Nuevo" id="new"><i class="far fa-file fa-3x"></i></a></li>
+          <li><a title="Abrir">
+              <label for="upload" class="upload">
+                <i class="far fa-folder-open fa-3x"></i>
+              </label>
+              <input type="file" class="hideMe" id="upload" name="upload"/>
+              </a>
+            </li>
+          <li><a title="Guardar" id="save"><i class="far fa-save fa-3x"></i></a></li>
+        </ul>
+      </div>
     </nav>
     <div class="container-fluid">
       <div class="row">
 
-        <div class="col-sm-3">
-          <p>Elementos de edición</p>
+        <div class="col-md-2">
+          <h5>Elementos de edición</h5>
+          <div class="col">
+            <button  type="button" onclick="dibujar()" name="button" class="btn btn-lg" title="Lapiz"><i class="fas fa-pencil-alt fa-2x"></i></button>
+            <label for="Color">Seleccionar color</label>
+            <input type="color" value="Paleta de colores" id="colores" onchange="cambiarColor()" title="Seleccionar color">
+            <label for="Grosor">Seleccionar grosor</label>
+            <input type="number" name="quantity" min="5" max="40" step="5" value="5" id="grosor" onchange="cambiarGrosor()" title="Seleccionar grosor">
+            <button type="button" onclick="borrar()" name="button" class="btn btn-lg" title="Goma de borrar"><i class="fas fa-eraser fa-2x"></i></button>
+
+          </div>
         </div>
 
-        <div class="col-sm-6" style="background:rgb(87, 189, 113)">
-          <p>Lienzo</p>
-          <canvas id="myCanvas" width="650" height="500" style="background:rgb(184, 113, 177)"></canvas>
+        <div class="col-md-8">
+          <h5 id="lienzo">Lienzo</h5>
+          <canvas id="myCanvas" width="850px" height="430px"></canvas>
         </div>
 
-        <div class="col-sm-3">
-          <p>Filtros</p>
+        <div class="col-md-2">
+          <h5>Filtros</h5>
+          <div class="col">
+            <button type="button" name="button" class="btn btn-md">Filtro1</button>
+            <button type="button" name="button" class="btn btn-md">Filtro2</button>
+            <button type="button" name="button" class="btn btn-md">Filtro3</button>
+            <button type="button" name="button" class="btn btn-md">Filtro4</button>
+            <button type="button" name="button" class="btn btn-md">Filtro5</button>
+            <button type="button" name="button" class="btn btn-md">Filtro6</button>
+          </div>
         </div>
 
       </div>
