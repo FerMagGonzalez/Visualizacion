@@ -54,11 +54,19 @@
 
         <div class="col-md-2">
           <h5>Filtros</h5>
-          <div class="col">
-            <button type="button" name="button" class="btn btn-md">Filtro1</button>
-            <button type="button" name="button" class="btn btn-md">Filtro2</button>
-            <button type="button" name="button" class="btn btn-md">Filtro3</button>
-            <button type="button" name="button" class="btn btn-md">Filtro4</button>
+          <div class="col" id="preview">
+            <button type="button" onclick="applyShine(5)" name="button" class="btn btn-md">
+              <img src="images/fShine.png" alt="Foto del filtro brillo">
+            </button>
+            <button type="button" onclick="applyInvert()" name="button" class="btn btn-md">
+              <img src="images/fInvert.png" alt="Foto del filtro negativo">
+            </button>
+            <button type="button" onclick="applyGreyScale()" name="button" class="btn btn-md">
+              <img src="images/fGreyScale.png" alt="Foto del filtro escala de grises">
+            </button>
+            <button type="button" onclick="applySepia()" name="button" class="btn btn-md">
+              <img src="images/fSepia.png" alt="Foto del filtro sepia">
+            </button>
             <button type="button" name="button" class="btn btn-md">Filtro5</button>
             <button type="button" name="button" class="btn btn-md">Filtro6</button>
           </div>
@@ -70,6 +78,7 @@
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/draw.js"></script>
+    <script src="js/filters.js"></script>
 
   </body>
 
